@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		D164883925AF4AAF00BCE720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164883825AF4AAF00BCE720 /* AppDelegate.swift */; };
 		D164883B25AF4AAF00BCE720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164883A25AF4AAF00BCE720 /* SceneDelegate.swift */; };
-		D164883D25AF4AAF00BCE720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164883C25AF4AAF00BCE720 /* ViewController.swift */; };
 		D164884025AF4AAF00BCE720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D164883E25AF4AAF00BCE720 /* Main.storyboard */; };
 		D164884325AF4AAF00BCE720 /* MemoProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D164884125AF4AAF00BCE720 /* MemoProject.xcdatamodeld */; };
 		D164884525AF4AB200BCE720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D164884425AF4AB200BCE720 /* Assets.xcassets */; };
 		D164884825AF4AB200BCE720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D164884625AF4AB200BCE720 /* LaunchScreen.storyboard */; };
+		D1C9006C25B2F5680030B107 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9006B25B2F5680030B107 /* Model.swift */; };
+		D1C9006F25B2F78E0030B107 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D164883525AF4AAF00BCE720 /* MemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D164883825AF4AAF00BCE720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D164883A25AF4AAF00BCE720 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D164883C25AF4AAF00BCE720 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D164883F25AF4AAF00BCE720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D164884225AF4AAF00BCE720 /* MemoProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MemoProject.xcdatamodel; sourceTree = "<group>"; };
 		D164884425AF4AB200BCE720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D164884725AF4AB200BCE720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D164884925AF4AB200BCE720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C9006B25B2F5680030B107 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,10 @@
 		D164883725AF4AAF00BCE720 /* MemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				D1C9006A25B2F5420030B107 /* Model */,
 				D164883825AF4AAF00BCE720 /* AppDelegate.swift */,
 				D164883A25AF4AAF00BCE720 /* SceneDelegate.swift */,
-				D164883C25AF4AAF00BCE720 /* ViewController.swift */,
+				D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */,
 				D164883E25AF4AAF00BCE720 /* Main.storyboard */,
 				D164884425AF4AB200BCE720 /* Assets.xcassets */,
 				D164884625AF4AB200BCE720 /* LaunchScreen.storyboard */,
@@ -68,6 +71,14 @@
 				D164884125AF4AAF00BCE720 /* MemoProject.xcdatamodeld */,
 			);
 			path = MemoProject;
+			sourceTree = "<group>";
+		};
+		D1C9006A25B2F5420030B107 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1C9006B25B2F5680030B107 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D164883D25AF4AAF00BCE720 /* ViewController.swift in Sources */,
 				D164884325AF4AAF00BCE720 /* MemoProject.xcdatamodeld in Sources */,
 				D164883925AF4AAF00BCE720 /* AppDelegate.swift in Sources */,
+				D1C9006F25B2F78E0030B107 /* MemoListTableViewController.swift in Sources */,
 				D164883B25AF4AAF00BCE720 /* SceneDelegate.swift in Sources */,
+				D1C9006C25B2F5680030B107 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
