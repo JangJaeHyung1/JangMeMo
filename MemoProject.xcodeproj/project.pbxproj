@@ -16,6 +16,7 @@
 		D1C9006C25B2F5680030B107 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9006B25B2F5680030B107 /* Model.swift */; };
 		D1C9006F25B2F78E0030B107 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */; };
 		D1C9007325B3166D0030B107 /* CreateMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9007225B3166D0030B107 /* CreateMemoViewController.swift */; };
+		D1C9007625B31C400030B107 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9007525B31C400030B107 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D1C9006B25B2F5680030B107 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		D1C9007225B3166D0030B107 /* CreateMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemoViewController.swift; sourceTree = "<group>"; };
+		D1C9007525B31C400030B107 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				D164883A25AF4AAF00BCE720 /* SceneDelegate.swift */,
 				D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */,
 				D164883E25AF4AAF00BCE720 /* Main.storyboard */,
+				D1C9007525B31C400030B107 /* DetailViewController.swift */,
 				D1C9007225B3166D0030B107 /* CreateMemoViewController.swift */,
 				D164884425AF4AB200BCE720 /* Assets.xcassets */,
 				D164884625AF4AB200BCE720 /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 				D164883B25AF4AAF00BCE720 /* SceneDelegate.swift in Sources */,
 				D1C9007325B3166D0030B107 /* CreateMemoViewController.swift in Sources */,
 				D1C9006C25B2F5680030B107 /* Model.swift in Sources */,
+				D1C9007625B31C400030B107 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
