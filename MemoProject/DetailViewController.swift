@@ -8,6 +8,16 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITableViewDataSource {
+    
+    var memo: Memo?
+    let formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .medium
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -16,10 +26,12 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
-//            cell.textLabel =
+            cell.textLabel?.text = formatter.string(for: memo?.insertDate)
+            
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "memoCell", for: indexPath)
+            cell.textLabel?.text = memo?.content
             return cell
         default:
             fatalError()

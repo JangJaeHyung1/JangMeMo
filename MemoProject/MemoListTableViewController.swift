@@ -12,10 +12,21 @@ class MemoListTableViewController: UITableViewController {
     let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long
-        f.dateFormat = .none
+        f.timeStyle = .none
         f.locale = Locale(identifier: "Ko_kr")
         return f
     }()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
+            let target = Memo.dummyMemoList[indexPath.row]
+            
+            if let vc = segue.destination as? DetailViewController{
+                vc.memo = target
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
