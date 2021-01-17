@@ -10,6 +10,8 @@ import CoreData
 
 class MemoListTableViewController: UITableViewController {
 
+    private var memos = [MemoData]()
+    
     let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long
@@ -20,7 +22,7 @@ class MemoListTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
-            let target = Memo.dummyMemoList[indexPath.row]
+            let target = memos[indexPath.row]
             
             if let vc = segue.destination as? DetailViewController{
                 vc.memo = target
@@ -29,31 +31,20 @@ class MemoListTableViewController: UITableViewController {
     }
     
     // MARK: - Core Data Manage
-//    func getAllItem(){
-//        
-//    }
-//
-//    func createItem(content: String, date: Date){
-//
-//    }
-//
-//    func deleteItem(item: MemoData){
-//
-//    }
-//
-//    func updateItem(item: MemoData){
-//
-//    }
-    
+
     fileprivate func getAllMemos(){
-        let items: [MemoData] = CoreDataManager.shared.getItems()
-        print(items)
+        memos = CoreDataManager.shared.getItems()
+
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAllMemos()
+
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -63,8 +54,11 @@ class MemoListTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getAllMemos()
         tableView.reloadData()
     }
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -74,16 +68,18 @@ class MemoListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Memo.dummyMemoList.count
+//        return Memo.dummyMemoList.count
+        return memos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        let target = Memo.dummyMemoList[indexPath.row]
+//        let target = Memo.dummyMemoList[indexPath.row]
+        let target = memos[indexPath.row]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        cell.detailTextLabel?.text = formatter.string(for: target.date)
 
         return cell
     }

@@ -33,9 +33,10 @@ class CreateMemoViewController: UIViewController {
     fileprivate func saveNewMemo(_ content:String, date:Date){
         CoreDataManager.shared.saveItem(content: content, date: date) { onSuccess in
             print("saved = \(onSuccess)")
+            
         }
     }
-    
+
 
     /*
     // MARK: - Navigation

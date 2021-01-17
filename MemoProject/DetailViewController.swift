@@ -10,7 +10,7 @@ import CoreData
 
 class DetailViewController: UIViewController, UITableViewDataSource {
     
-    var memo: Memo?
+    var memo: MemoData?
     let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long
@@ -27,7 +27,7 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
-            cell.textLabel?.text = formatter.string(for: memo?.insertDate)
+            cell.textLabel?.text = formatter.string(for: memo?.date)
             
             return cell
         case 1:
