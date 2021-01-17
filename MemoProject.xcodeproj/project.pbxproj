@@ -10,9 +10,12 @@
 		D164883925AF4AAF00BCE720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164883825AF4AAF00BCE720 /* AppDelegate.swift */; };
 		D164883B25AF4AAF00BCE720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164883A25AF4AAF00BCE720 /* SceneDelegate.swift */; };
 		D164884025AF4AAF00BCE720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D164883E25AF4AAF00BCE720 /* Main.storyboard */; };
-		D164884325AF4AAF00BCE720 /* MemoProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D164884125AF4AAF00BCE720 /* MemoProject.xcdatamodeld */; };
+		D164884325AF4AAF00BCE720 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D164884125AF4AAF00BCE720 /* Model.xcdatamodeld */; };
 		D164884525AF4AB200BCE720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D164884425AF4AB200BCE720 /* Assets.xcassets */; };
 		D164884825AF4AB200BCE720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D164884625AF4AB200BCE720 /* LaunchScreen.storyboard */; };
+		D16FC5DA25B424F1001F1483 /* MemoData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16FC5D825B424F1001F1483 /* MemoData+CoreDataClass.swift */; };
+		D16FC5DB25B424F1001F1483 /* MemoData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16FC5D925B424F1001F1483 /* MemoData+CoreDataProperties.swift */; };
+		D16FC5E125B4280F001F1483 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16FC5E025B4280F001F1483 /* CoreDataManager.swift */; };
 		D1C9006C25B2F5680030B107 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9006B25B2F5680030B107 /* Model.swift */; };
 		D1C9006F25B2F78E0030B107 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */; };
 		D1C9007325B3166D0030B107 /* CreateMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C9007225B3166D0030B107 /* CreateMemoViewController.swift */; };
@@ -28,6 +31,9 @@
 		D164884425AF4AB200BCE720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D164884725AF4AB200BCE720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D164884925AF4AB200BCE720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D16FC5D825B424F1001F1483 /* MemoData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D16FC5D925B424F1001F1483 /* MemoData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D16FC5E025B4280F001F1483 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D1C9006B25B2F5680030B107 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		D1C9007225B3166D0030B107 /* CreateMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemoViewController.swift; sourceTree = "<group>"; };
@@ -64,19 +70,30 @@
 		D164883725AF4AAF00BCE720 /* MemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				D16FC5DE25B42519001F1483 /* MemoItem */,
 				D1C9006A25B2F5420030B107 /* Model */,
 				D164883825AF4AAF00BCE720 /* AppDelegate.swift */,
 				D164883A25AF4AAF00BCE720 /* SceneDelegate.swift */,
 				D1C9006E25B2F78E0030B107 /* MemoListTableViewController.swift */,
-				D164883E25AF4AAF00BCE720 /* Main.storyboard */,
+				D16FC5E025B4280F001F1483 /* CoreDataManager.swift */,
 				D1C9007525B31C400030B107 /* DetailViewController.swift */,
 				D1C9007225B3166D0030B107 /* CreateMemoViewController.swift */,
+				D164883E25AF4AAF00BCE720 /* Main.storyboard */,
 				D164884425AF4AB200BCE720 /* Assets.xcassets */,
 				D164884625AF4AB200BCE720 /* LaunchScreen.storyboard */,
 				D164884925AF4AB200BCE720 /* Info.plist */,
-				D164884125AF4AAF00BCE720 /* MemoProject.xcdatamodeld */,
+				D164884125AF4AAF00BCE720 /* Model.xcdatamodeld */,
 			);
 			path = MemoProject;
+			sourceTree = "<group>";
+		};
+		D16FC5DE25B42519001F1483 /* MemoItem */ = {
+			isa = PBXGroup;
+			children = (
+				D16FC5D825B424F1001F1483 /* MemoData+CoreDataClass.swift */,
+				D16FC5D925B424F1001F1483 /* MemoData+CoreDataProperties.swift */,
+			);
+			path = MemoItem;
 			sourceTree = "<group>";
 		};
 		D1C9006A25B2F5420030B107 /* Model */ = {
@@ -157,12 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D164884325AF4AAF00BCE720 /* MemoProject.xcdatamodeld in Sources */,
+				D164884325AF4AAF00BCE720 /* Model.xcdatamodeld in Sources */,
 				D164883925AF4AAF00BCE720 /* AppDelegate.swift in Sources */,
 				D1C9006F25B2F78E0030B107 /* MemoListTableViewController.swift in Sources */,
+				D16FC5DB25B424F1001F1483 /* MemoData+CoreDataProperties.swift in Sources */,
+				D16FC5DA25B424F1001F1483 /* MemoData+CoreDataClass.swift in Sources */,
 				D164883B25AF4AAF00BCE720 /* SceneDelegate.swift in Sources */,
 				D1C9007325B3166D0030B107 /* CreateMemoViewController.swift in Sources */,
 				D1C9006C25B2F5680030B107 /* Model.swift in Sources */,
+				D16FC5E125B4280F001F1483 /* CoreDataManager.swift in Sources */,
 				D1C9007625B31C400030B107 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,13 +387,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D164884125AF4AAF00BCE720 /* MemoProject.xcdatamodeld */ = {
+		D164884125AF4AAF00BCE720 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				D164884225AF4AAF00BCE720 /* MemoProject.xcdatamodel */,
 			);
 			currentVersion = D164884225AF4AAF00BCE720 /* MemoProject.xcdatamodel */;
-			path = MemoProject.xcdatamodeld;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

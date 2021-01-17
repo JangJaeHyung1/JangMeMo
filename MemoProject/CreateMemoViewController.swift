@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateMemoViewController: UIViewController {
     @IBOutlet weak var memoContent: UITextView!
@@ -17,6 +18,7 @@ class CreateMemoViewController: UIViewController {
         let memo = memoContent.text
         let newMemo = Memo.init(content: memo ?? " ")
         Memo.dummyMemoList.append(newMemo)
+        saveNewMemo(newMemo.content, date: newMemo.insertDate)
         dismiss(animated: true, completion: nil)
     }
     
@@ -25,6 +27,13 @@ class CreateMemoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    fileprivate func saveNewMemo(_ content:String, date:Date){
+        CoreDataManager.shared.saveItem(content: content, date: date) { onSuccess in
+            print("saved = \(onSuccess)")
+        }
     }
     
 

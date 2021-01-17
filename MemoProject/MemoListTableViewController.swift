@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MemoListTableViewController: UITableViewController {
 
@@ -27,9 +28,32 @@ class MemoListTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Core Data Manage
+//    func getAllItem(){
+//        
+//    }
+//
+//    func createItem(content: String, date: Date){
+//
+//    }
+//
+//    func deleteItem(item: MemoData){
+//
+//    }
+//
+//    func updateItem(item: MemoData){
+//
+//    }
+    
+    fileprivate func getAllMemos(){
+        let items: [MemoData] = CoreDataManager.shared.getItems()
+        print(items)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getAllMemos()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
