@@ -43,11 +43,28 @@ class DetailViewController: UIViewController, UITableViewDataSource, SendDataDel
             fatalError()
         }
     }
-    @IBAction func btnDelete(_ sender: UIBarButtonItem) {
-        if let date = memo?.date {
-            deleteMemo(date)
-            self.navigationController?.popViewController(animated: true)
+    
+    @IBAction func btnShared(_ sender: UIBarButtonItem) {
+        guard let memo = memo?.content else {
+            return
         }
+        let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func btnDelete(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: nil, message: "메모를 삭제하시겠습니까?", preferredStyle: .actionSheet)
+        let defaultAction = UIAlertAction(title: "삭제", style: .destructive){_ in
+            if let date = self.memo?.date {
+                self.deleteMemo(date)
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler : nil)
+        alert.addAction(cancel)
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
+        
     }
     
     fileprivate func deleteMemo(_ date: Date) {
