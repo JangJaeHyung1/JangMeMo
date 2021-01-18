@@ -8,7 +8,12 @@
 import UIKit
 import CoreData
 
-class DetailViewController: UIViewController, UITableViewDataSource {
+class DetailViewController: UIViewController, UITableViewDataSource, SendDataDelegate {
+    func sendData(data: MemoData) {
+        memo = data
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var memo: MemoData?
     let formatter: DateFormatter = {
@@ -38,23 +43,40 @@ class DetailViewController: UIViewController, UITableViewDataSource {
             fatalError()
         }
     }
+    @IBAction func btnDelete(_ sender: UIBarButtonItem) {
+        if let date = memo?.date {
+            deleteMemo(date)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
     
-   
+    fileprivate func deleteMemo(_ date: Date) {
+        CoreDataManager.shared.deleteItem(date: date)  { onSuccess in
+            print("deleted = \(onSuccess)")
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination.children.first as? CreateMemoViewController {
+            vc.memo = memo
+            vc.delegate = self
+        }
     }
-    */
+    
 
 }

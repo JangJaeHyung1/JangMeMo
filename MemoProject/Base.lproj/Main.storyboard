@@ -197,9 +197,17 @@
                                 <items>
                                     <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="2gn-Tb-QzY"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4DC-mc-H9T"/>
-                                    <barButtonItem title="Item" image="square.and.pencil" catalog="system" id="4xk-ej-zEz"/>
+                                    <barButtonItem title="Item" image="square.and.pencil" catalog="system" id="4xk-ej-zEz">
+                                        <connections>
+                                            <segue destination="Uty-jR-znP" kind="presentation" modalPresentationStyle="fullScreen" id="aGT-Rl-Olc"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="M6W-sT-0ZP"/>
-                                    <barButtonItem title="Item" image="trash" catalog="system" id="bYX-Xt-IPt"/>
+                                    <barButtonItem title="Item" image="trash" catalog="system" id="bYX-Xt-IPt">
+                                        <connections>
+                                            <action selector="btnDelete:" destination="w2O-Yf-JLN" id="9Er-HG-1HJ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -216,12 +224,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="메모 보기" id="vhN-uv-YZw"/>
+                    <connections>
+                        <outlet property="tableView" destination="6Nl-ch-NMe" id="7s0-U0-XeJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrh-w4-WoS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="661" y="1550"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aGT-Rl-Olc"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>

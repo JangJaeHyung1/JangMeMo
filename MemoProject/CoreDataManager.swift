@@ -17,6 +17,24 @@ class CoreDataManager{
     
     let modelName: String = "MemoData"
     
+    func getItem(date:Date) -> MemoData{
+        var item: MemoData?
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = filteredRequest(date: date)
+        
+        do{
+            if let results:[MemoData] = try context?.fetch(fetchRequest) as? [MemoData] {
+                if results.count != 0{
+                    item = results[0]
+                }
+            }
+        }catch let error as NSError {
+            print("Could not fatch: \(error), \(error.userInfo)")
+
+        }
+        return item!
+    }
+    
+    
     func getItems(ascending: Bool = false) ->[MemoData]{
         var models: [MemoData] = [MemoData]()
         
@@ -50,8 +68,8 @@ class CoreDataManager{
         }
     }
     
-    func deleteItem(content: String, onSuccess: @escaping ((Bool) -> Void) ){
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = filteredRequest(content: content)
+    func deleteItem(date: Date, onSuccess: @escaping ((Bool) -> Void) ){
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = filteredRequest(date: date)
         
         do{
             if let results:[MemoData] = try context?.fetch(fetchRequest) as? [MemoData] {
@@ -68,15 +86,19 @@ class CoreDataManager{
             onSuccess(success)
         }
     }
+    
+    
+    
+
 }
 
 
 
 extension CoreDataManager {
-    fileprivate func filteredRequest(content: String) -> NSFetchRequest<NSFetchRequestResult> {
+    fileprivate func filteredRequest(date: Date) -> NSFetchRequest<NSFetchRequestResult> {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult>
             = NSFetchRequest<NSFetchRequestResult>(entityName: modelName)
-        fetchRequest.predicate = NSPredicate(format: "content = %@", NSString(string: content))
+        fetchRequest.predicate = NSPredicate(format: "date = %@", date as NSDate)
         return fetchRequest
     }
     
