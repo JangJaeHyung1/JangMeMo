@@ -1,21 +1,47 @@
 # JangMeMo
 
-Core Data를 적용한 메모장
+  Core Data를 적용한 메모장
 
 
-<img width="300" alt="스크린샷 2021-01-26 오후 10 39 54" src="https://user-images.githubusercontent.com/37135479/105852519-ebbdaf00-6027-11eb-87a8-2c7f3c004d82.png">
+<img width="467" alt="1" src="https://user-images.githubusercontent.com/37135479/105853346-eca31080-6028-11eb-9c77-3bf0721cbce7.png">
 
-메모 리스트
-<img width="300" alt="스크린샷 2021-01-26 오후 10 40 28" src="https://user-images.githubusercontent.com/37135479/105852625-0bed6e00-6028-11eb-8da3-f9b46c738513.png">
 
-새메모 작성
-<img width="300" alt="스크린샷 2021-01-26 오후 10 40 19" src="https://user-images.githubusercontent.com/37135479/105852590-04c66000-6028-11eb-9732-1a953b09f722.png">
 
-작성된 메모보기_1
-<img width="300" alt="스크린샷 2021-01-26 오후 10 40 24" src="https://user-images.githubusercontent.com/37135479/105852620-0a23aa80-6028-11eb-85a3-b9de06c6e0db.png">
 
-작성된 메모보기_2
-<img width="300" alt="스크린샷 2021-01-26 오후 10 40 28" src="https://user-images.githubusercontent.com/37135479/105852625-0bed6e00-6028-11eb-8da3-f9b46c738513.png">
+  메모 리스트
 
-그 외 공유, 수정, 삭제 중 공유 기능
-<img width="300" alt="스크린샷 2021-01-26 오후 10 40 28" src="https://user-images.githubusercontent.com/37135479/105852625-0bed6e00-6028-11eb-8da3-f9b46c738513.png">
+
+<img width="467" alt="2" src="https://user-images.githubusercontent.com/37135479/105853393-fd538680-6028-11eb-9f6a-58c0ea065368.png">
+
+
+
+
+  새메모 작성
+
+
+<img width="467" alt="3" src="https://user-images.githubusercontent.com/37135479/105853505-1fe59f80-6029-11eb-9b18-09cfba003827.png">
+
+
+
+
+  작성된 메모보기_1
+  
+  
+<img width="467" alt="4" src="https://user-images.githubusercontent.com/37135479/105853565-32f86f80-6029-11eb-934b-f30017f94563.png">
+
+
+
+
+  작성된 메모보기_2
+
+
+<img width="467" alt="5" src="https://user-images.githubusercontent.com/37135479/105853692-4a375d00-6029-11eb-9916-b3577549c2a9.png">
+
+
+
+
+  그 외 공유, 수정, 삭제 중 공유 기능
+  
+  
+  <img width="467" alt="6" src="https://user-images.githubusercontent.com/37135479/105853734-5a4f3c80-6029-11eb-99a0-913c805d5ccc.png">
+
