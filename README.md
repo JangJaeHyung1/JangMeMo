@@ -1,9 +1,12 @@
 # JangMeMo
 
+
   Core Data를 적용한 메모장
 
 
 <img width="300" alt="1" src="https://user-images.githubusercontent.com/37135479/105853346-eca31080-6028-11eb-9c77-3bf0721cbce7.png">
+
+
 
 
 
@@ -16,10 +19,14 @@
 
 
 
+
+
   새메모 작성
 
 
 <img width="300" alt="3" src="https://user-images.githubusercontent.com/37135479/105853505-1fe59f80-6029-11eb-9b18-09cfba003827.png">
+
+
 
 
 
@@ -32,10 +39,14 @@
 
 
 
+
+
   작성된 메모보기_2
 
 
 <img width="300" alt="5" src="https://user-images.githubusercontent.com/37135479/105853692-4a375d00-6029-11eb-9916-b3577549c2a9.png">
+
+
 
 
 
@@ -45,3 +56,5 @@
   
   <img width="300" alt="6" src="https://user-images.githubusercontent.com/37135479/105853734-5a4f3c80-6029-11eb-99a0-913c805d5ccc.png">
 
+
+감사합니다.
