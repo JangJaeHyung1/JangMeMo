@@ -56,5 +56,3 @@
   
   <img width="300" alt="6" src="https://user-images.githubusercontent.com/37135479/105853734-5a4f3c80-6029-11eb-99a0-913c805d5ccc.png">
 
-
-감사합니다.
