@@ -1,7 +1,7 @@
 # JangMeMo
 
 
-  Core Data의 Persistence 기능을 사용하여 제작한 메모장 어플입니다.
+  Core Data의 Persistence 기능(fetch, save, delete)을 사용하여 제작한 메모장 어플입니다.
   
   메모의 내용과 작성일을 데이터로 하여 저장하고, 수정과 삭제 또 공유을 포함합니다.
   
