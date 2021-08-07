@@ -11,7 +11,7 @@
   
   https://zeddios.tistory.com/987 와
   
-  https://zeddios.tistory.com/989?category=682195 를 참조하여 제작하였습니다.
+  https://zeddios.tistory.com/989 를 참조하여 제작하였습니다.
   
   아래는 어플 시연 이미지 입니다.
   
