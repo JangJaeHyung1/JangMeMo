@@ -6,8 +6,9 @@
   메모의 내용과 작성일을 데이터로 하여 저장하고, 수정과 삭제 또 공유을 포함합니다.
   
   
-  zeddios님의 coreData 
-  https://zeddios.tistory.com/987 와 https://zeddios.tistory.com/989?category=682195 를 참조하여 제작하였습니다.
+  zeddios님의 coreData 글.
+  https://zeddios.tistory.com/987 와
+  https://zeddios.tistory.com/989?category=682195 를 참조하여 제작하였습니다.
   
   
 
