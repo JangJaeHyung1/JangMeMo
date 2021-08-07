@@ -7,7 +7,7 @@
   
   
   
-  zeddios님의 coreData 글.
+  zeddios님의 coreData 글
   
   https://zeddios.tistory.com/987 와
   
